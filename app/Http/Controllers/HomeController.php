@@ -6,6 +6,7 @@ use App\Models\StudInsert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 use DB;
 class HomeController extends Controller
 {
@@ -30,16 +31,24 @@ class HomeController extends Controller
     }
 
     public function insert(Request $request){
-        $name = $request->input('name');
-        $email = $request->input('email');
+        $id = Auth::id();
+        $name = Auth::user()->name;
+        $email = Auth::user()->email;
         $phone = $request->input('phone');
         $date = $request->input('date');
         $department = $request->input('department');
         $doctor = $request->input('doctor');
         $message = $request->input('message');
-        $data=array('name'=>$name,"email"=>$email,"phone"=>$phone,"date"=>$date,"department"=>$department, "doctor"=> $doctor, "message"=> $message  );
-        DB::table('patient_details')->insert($data);
+        $estado = 'pending';
+        $data=array('id'=>$id,'name'=>$name,"email"=>$email,"phone"=>$phone,"date"=>$date,"department"=>$department, "doctor"=> $doctor, "message"=> $message, "estado" => $estado );
+        DB::table('appointments')->insert($data);
         echo "Record inserted successfully.<br/>";
         // echo '<a href = "/insert">Click Here</a> to go back.';
     }
+
+    
+
+   
+
+    
 }

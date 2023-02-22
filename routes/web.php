@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DoctorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +20,13 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::post('/','App\Http\Controllers\HomeController@insert')->name('post.insert');
+Route::get('/welcomecopy', [App\Http\Controllers\UserController::class, 'index'])->name('doctor');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/users', [UserController::class, 'store'])->name('users.store');
+Route::post('/buscar-registros', [UserController::class, 'buscar'])->name('buscar.registros');
+Route::post('/buscar-registros2', [UserController::class, 'consulta2'])->name('consulta.registros');
+Route::post('/buscar-patient', [DoctorController::class, 'buscarP'])->name('buscarP.registros');
+Route::post('/buscar-patient2', [DoctorController::class, 'consulta2P'])->name('consultaP.registros');
+Route::post('users/{id}/approve', 'App\Http\Controllers\DoctorController@approve')->name('users.approve');
+
+

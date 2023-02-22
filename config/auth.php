@@ -58,18 +58,17 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+            'table' => 'user_role', // tabla que contiene el correo electrónico y el rol de los usuarios
+            'fillable' => ['email', 'password', 'role'], // campos que se utilizarán para autenticar a los usuarios
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
+    
+    
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -107,5 +106,8 @@ return [
     */
 
     'password_timeout' => 10800,
+
+    
+    
 
 ];
