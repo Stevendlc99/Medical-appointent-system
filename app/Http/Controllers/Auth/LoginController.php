@@ -53,8 +53,14 @@ class LoginController extends Controller
 
     if ($role == 'patient') {
         return redirect()->route('home');
-    } else if ($role == 'doctor') {
+    } 
+    else if ($role == 'doctor') {
         return redirect()->route('doctor');
+      
+    }
+    else if ($role == 'nurse') {
+        return redirect()->route('nurse');
+      
     }
 
     // Si el usuario no tiene un rol asignado, redirigirlo a la página de inicio

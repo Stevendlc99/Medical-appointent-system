@@ -7,24 +7,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link href="assets/css/style.css" rel="stylesheet">
-  
 </head>
 <div class="container">
 <table class="custom-table table table-bordered table-striped">
   <thead>
     <tr class="text-center">
-      <th>Name</th>
-      <th>Email</th>
-      <th>Subject</th>
-      <th>Message</th>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>Temperature</th>
+      <th>Pressure</th>
+      <th>Pulse</th>
+      <th>Observations</th>
+
     </tr>
   </thead>
   <tbody>
     @foreach ($registros as $registro)
       <tr>
-        <td>{{ $registro->name }}</td>
-        <td>{{ $registro->email }}</td>
-        <td>{{ $registro->subject }}</td>
+        <td>{{ $registro->id }}</td>
+        <td>{{ $registro->date }}</td>
+        <td>{{ $registro->weight }}</td>
+        <td>{{ $registro->height }}</td>
+        <td>{{ $registro->temperature }}</td>
+        <td>{{ $registro->pressure }}</td>
+        <td>{{ $registro->pulse }}</td>
         <td>{{ $registro->message }}</td>
         
       </tr>

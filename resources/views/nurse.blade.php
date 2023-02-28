@@ -66,7 +66,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Enquiries</a></li>
+          
           <!-- <li><a class="nav-link scrollto" href="settings.html">Settings</a></li> -->
         
           
@@ -137,12 +137,12 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero3" class="d-flex align-items-center">
     <div class="container">
-      <h1>Welcome to MAB-SYT PATIENT TEMPLATE</h1>
+      <h1>Welcome to MAB-SYT NURSE TEMPLATE</h1>
       <h2>A Medical Appointment Booking System for Yachay Tech community</h2>
       <!-- <a href="#about" class="btn-get-started scrollto">About MAB-SYT</a> -->
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      
     </div>
   </section><!-- End Hero -->
 
@@ -198,11 +198,11 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Make an Appointment</h2>
-          <p>Dont be afraid! We are here to care you!.</p>
+          <h2>Introduce vital data</h2>
+     
         </div>
 
-        <form action="{{ route('post.insert') }}" method="post" role="form" class="php-email-form">
+        <form action="{{ route('insert.patient') }}" method="post" role="form" class="php-email-form">
           @csrf
           <div class="row">
             <!-- <div class="col-md-4 form-group">
@@ -214,41 +214,39 @@
               <div class="validate"></div> -->
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <input type="tel" class="form-control" name="id" id="id" placeholder="Patient ID" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4 form-group mt-3">
+            <div class="col-md-2 form-group mt-3">
               <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4">
               <div class="validate"></div>
             </div>
-            <!-- <div class="col-md-2 form-group mt-3">
-              <input type="time" name="time" class="form-control timepicker" id="time" placeholder="Appointment Date" data-rule="minlen:4"  min="08:00" max="18:00" step="1800">
-              <div class="validate"></div>
-            </div> -->
-            <div class="col-md-4 form-group mt-3">
-              <select name="department" id="department" class="form-select">
-                <option value="">Select Department</option>
-                <option value="Department 1">Department 1</option>
-                <option value="Department 2">Department 2</option>
-                <option value="Department 3">Department 3</option>
-              </select>
+            <div class="col-md-2 form-group mt-3 ">
+              <input type="tel" class="form-control" name="weight" id="weight" placeholder="Weight" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="doctor" id="doctor" class="form-select">
-                <option value="">Select Doctor</option>
-                <option value="Doctor 1">Doctor 1</option>
-                <option value="Doctor 2">Doctor 2</option>
-                <option value="Doctor 3">Doctor 3</option>
-              </select>
+            <div class="col-md-2 form-group mt-3 ">
+              <input type="tel" class="form-control" name="height" id="height" placeholder="Height" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-2 form-group mt-3 ">
+              <input type="tel" class="form-control" name="temperature" id="temperature" placeholder="Temperature" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-2 form-group mt-3 ">
+              <input type="tel" class="form-control" name="pressure" id="pressure" placeholder="Pressure" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-2 form-group mt-3 ">
+              <input type="tel" class="form-control" name="pulse" id="pulse" placeholder="Pulse" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
           </div>
 
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            <textarea class="form-control" name="message" rows="5" placeholder="Observations (Optional)"></textarea>
             <div class="validate"></div>
           </div>
           <div class="mb-3">
@@ -258,96 +256,19 @@
           </div>
           <!-- <div class="calendar">
           </div> -->
-          <div class="text-center"><button type="submit">Make an Appointment</button></div>
+          <div class="text-center"><button type="submit">Insert Vital Data</button></div>
          
         </form>
-        <form action="{{ route('consulta.registros') }}" method="POST">
+        <form action="{{ route('consultaN.registros') }}" method="POST">
              @csrf
-             <button class="btn btn-primary " type="submit">See my appointmens</button>
+             <button class="btn btn-primary " type="submit">See all Vital Data</button>
            </form>
 
       </div>
     </section>
     <!-- End Appointment Section -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Enquiries</h2>
-          <p>Hey! Tell us about what is worng with you. We will answer you as soon as possible.</p>
-        </div>
-      </div>
-
-      <!-- ====== UBICACION POR GOOGLE ====== -->
-      <!-- <div>
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-      </div> -->
-
-      <div class="container">
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Department:</h4>
-                <p>Urcuqui, Yachay Tech. Edificio Senecyt</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>medicalcenter@yachaytech.edu.ec</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+593 912 064 583</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="{{ route('users.store') }}" method="post" role="form" class="php-email-form">
-            @csrf
-              <div class="row">
-                <!-- <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div> -->
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-            <form action="{{ route('buscar.registros') }}" method="POST">
-             @csrf
-             <button class="btn btn-primary " type="submit">See my enqueries</button>
-           </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
+    
 
   </main><!-- End #main -->
 

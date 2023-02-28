@@ -46,6 +46,11 @@ public function index()
         return view('doctor');
     }
 
+    public function indexN()
+    {
+        return view('nurse');
+    }
+
 }
 
 
