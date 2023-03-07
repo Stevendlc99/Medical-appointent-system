@@ -35,6 +35,12 @@ public function approve($id)
         return redirect()->back();
     }
 
+public function delete($id)
+{
+    DB::table('appointments')->where('date', $id)->delete();
+    
+    return redirect()->back();
+}
 }
 
 

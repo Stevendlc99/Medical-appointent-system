@@ -20,7 +20,8 @@ class UserController extends Controller
         $email = Auth::user()->email;
         $subject = $request->input('subject');
         $message = $request->input('message');
-        $data=array('id'=>$id, 'name'=>$name,"email"=>$email,"subject"=>$subject,"message"=>$message);
+        $response = 'pending';
+        $data=array('id'=>$id, 'name'=>$name,"email"=>$email,"subject"=>$subject,"message"=>$message,"response"=>$response);
         DB::table('queries')->insert($data);
         echo "Record inserted successfully.<br/>";
        
@@ -50,6 +51,23 @@ public function index()
     {
         return view('nurse');
     }
+
+    public function updateResponse(Request $request, $id)
+    {
+        $registro = DB::table('queries')->where('subject', $id)->first();
+    
+        if (!$registro) {
+            abort(404);
+        }
+    
+        $response = $request->input('response');
+    
+        DB::table('queries')->where('subject', $id)->update(['response' => $response]);
+    
+        return redirect()->back();
+    }
+    
+
 
 }
 

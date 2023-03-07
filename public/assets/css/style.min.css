@@ -58,6 +58,9 @@ body{
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
+  .container-tabla {
+    padding-top: 50px; /* ajusta el valor de padding según tus necesidades */
+  }
   #header {
     background: #fff;
     transition: all 0.5s;

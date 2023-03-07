@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Project Prototype</title>
+  <title>MAB-SYT</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">medicalcenter@yachaytech.edu.ec</a>
         <i class="bi bi-phone"></i> +1 5589 55488 55
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
@@ -359,10 +359,8 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Send some suggestion</h4>
-            <p>This website is still in Development process. Send us your suggestion for improving the service!</p>
-            <form action="" method="post">
-              <input type="text"><input type="submit" value="Suggest">
-            </form>
+            <p>This website is still in Development process!</p>
+            
           </div>
 
         </div>
