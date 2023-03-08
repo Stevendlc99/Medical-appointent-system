@@ -37,7 +37,7 @@ First of all, to install and replicate our website platform, developers will nee
 - 1 - Open the localhost:8000 from your browser.
 - 2 - If you don’t have an account currently registered, go to the Register page on the navigation bar. Otherwise, go to the Login page.
 - 3 - Create an account, and hit the “Register” button. 
-- 4 - Use the navigation bar to book appointments, make enquiries, and edit your profile. 
+- 4 - Scroll down to book appointments and make enquiries. 
 - 5 - In case you leave the platform, press the Logout button at the top right position.
 - 6 - Enjoy. 
 
