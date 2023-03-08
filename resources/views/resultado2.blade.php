@@ -74,6 +74,7 @@
                                             <th class="border-bottom p-3">Phone</th>
                                             <th class="border-bottom p-3">Department</th>
                                             <th class="border-bottom p-3">Date</th>
+                                            <th class="border-bottom p-3">Hour</th>
                                             <th class="border-bottom p-3" style="min-width: 150px;">Doctor</th>
                                             <th class="border-bottom p-3">Message</th>
                                             <th class="border-bottom p-3" style="min-width: 220px;">Status</th>
@@ -88,13 +89,14 @@
         <td>{{ $registro->phone }}</td>
         <td>{{ $registro->department }}</td>
         <td>{{ $registro->date }}</td>
+        <td>{{ $registro->hour }}</td>
         <td>{{ $registro->doctor }}</td>
         <td>{{ $registro->message }}</td>
         <td>{{ $registro->estado }}</td>
         <td>
         <form action="{{ route('users.delete', $registro->date) }}" method="POST">
         @csrf
-        <button class="btn btn-danger" type="submit">Cancell</button>
+        <button class="btn btn-danger" type="submit">Cancel</button>
       </form>
         </td>
       </tr>

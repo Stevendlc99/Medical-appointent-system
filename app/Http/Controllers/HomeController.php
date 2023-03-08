@@ -40,7 +40,8 @@ class HomeController extends Controller
         $doctor = $request->input('doctor');
         $message = $request->input('message');
         $estado = 'pending';
-        $data=array('id'=>$id,'name'=>$name,"email"=>$email,"phone"=>$phone,"date"=>$date,"department"=>$department, "doctor"=> $doctor, "message"=> $message, "estado" => $estado );
+        $hour = $request->input('time');
+        $data=array('id'=>$id,'name'=>$name,"email"=>$email,"phone"=>$phone,"date"=>$date,"department"=>$department, "doctor"=> $doctor, "message"=> $message, "estado" => $estado ,  "hour" => $hour );
         DB::table('appointments')->insert($data);
         echo "Record inserted successfully.<br/>";
         // echo '<a href = "/insert">Click Here</a> to go back.';
