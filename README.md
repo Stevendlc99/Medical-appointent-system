@@ -34,7 +34,7 @@ First of all, to install and replicate our website platform, developers will nee
 
 ## How to Use:
 
-- 1 - Open the localhost:3306 from your browser.
+- 1 - Open the localhost:8000 from your browser.
 - 2 - If you don’t have an account currently registered, go to the Register page on the navigation bar. Otherwise, go to the Login page.
 - 3 - Create an account, and hit the “Register” button. 
 - 4 - Use the navigation bar to book appointments, make enquiries, and edit your profile. 
