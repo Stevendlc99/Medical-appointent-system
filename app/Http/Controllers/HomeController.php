@@ -31,6 +31,9 @@ class HomeController extends Controller
     }
 
     public function insert(Request $request){
+        
+
+
         $id = Auth::id();
         $name = Auth::user()->name;
         $email = Auth::user()->email;
@@ -41,10 +44,16 @@ class HomeController extends Controller
         $message = $request->input('message');
         $estado = 'pending';
         $hour = $request->input('time');
+        $data = DB::table('appointments')->where('date', $date)->where('hour', $hour)->get();
+        if(count($data) > 0) {
+            echo "Date and Hour selected are already OCCUPIED<br/>";
+        }
+        else {
         $data=array('id'=>$id,'name'=>$name,"email"=>$email,"phone"=>$phone,"date"=>$date,"department"=>$department, "doctor"=> $doctor, "message"=> $message, "estado" => $estado ,  "hour" => $hour );
         DB::table('appointments')->insert($data);
         echo "Record inserted successfully.<br/>";
         // echo '<a href = "/insert">Click Here</a> to go back.';
+        }
     }
 
     
