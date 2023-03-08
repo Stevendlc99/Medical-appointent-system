@@ -7,6 +7,41 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Requirements
+
+First of all, to install and replicate our website platform, developers will need to consider the following installation requirements:
+
+- PHP 8.1.9
+- NodeJs
+- npm
+- Mysql  8.0.31
+- Composer 2.5.1
+- Laravel 8.1.9
+- Bootstrap 4.1
+
+## How to Install:
+
+- 1 - Clone the repositorio: git clone https://github.com/Stevendlc99/mabsytau.git 
+- 2 - Open: Command line interface from cloned file directory
+- 3 - Run: pip install npm
+- 4 - Run: npm run dev
+- 5 - In case you have problem with “vite”, run: npm install vite --save-dev
+- 6 - Start/run mysql
+- 7 - From a new terminal, Run: php artisan migrate. In case of receive a message for create the “mabsyt” database, answer “yes” / “y”
+- 8 - Run: php artisan serve 
+- 9 - Go to the address provided by the CLI.
+- 10 - Enjoy 
+
+## How to Use:
+
+- 1 - Open the localhost:3306 from your browser.
+- 2 - If you don’t have an account currently registered, go to the Register page on the navigation bar. Otherwise, go to the Login page.
+- 3 - Create an account, and hit the “Register” button. 
+- 4 - Use the navigation bar to book appointments, make enquiries, and edit your profile. 
+- 5 - In case you leave the platform, press the Logout button at the top right position.
+- 6 - Enjoy. 
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
