@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Medilab Bootstrap Template - Index</title>
+  <title>MAB-SYT DOCTOR</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/yt.jpg" rel="icon">
+  <link href="assets/img/yt.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -230,6 +230,22 @@
 
       </div>
     </section><!-- End Contact Section -->
+    <!-- ======= VITAL DATA Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>See vital data information</h2>
+         
+        </form>
+        <form action="{{ route('consultaN.registros') }}" method="POST"">
+             @csrf
+             <button class="btn btn-primary " type="submit">See vital data</button>
+           </form>
+
+      </div>
+    </section>
+    <!-- End VITAL DATA Section -->
 
   </main><!-- End #main -->
 
