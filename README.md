@@ -21,7 +21,7 @@ First of all, to install and replicate our website platform, developers will nee
 
 ## How to Install:
 
-- 1 - Clone the repositorio: git clone https://github.com/Stevendlc99/mabsytau.git 
+- 1 - Clone the repositorio: git clone https://github.com/Stevendlc99/Medical-appointent-system.git
 - 2 - Open: Command line interface from cloned file directory
 - 3 - Run: pip install npm
 - 4 - Run: npm run dev
